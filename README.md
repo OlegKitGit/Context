@@ -1,2 +1,2 @@
-# knowledge_constructor
+# Knowledge Constructor
 Project on the knowledge network constructing
