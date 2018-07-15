@@ -2,7 +2,7 @@
 
 import sqlite3
 
-con = sqlite3.connect("./Knowledgebase.db")
+con = sqlite3.connect("Knowledgebase.db")
 cur = con.cursor()
 
 sql = """\
@@ -10,7 +10,7 @@ sql = """\
 CREATE TABLE Concept (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     statement INTEGER,
-    name TEXT,
+    name TEXT
 );
 
 CREATE TABLE Context (
