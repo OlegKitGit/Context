@@ -22,7 +22,7 @@ class MyGUI:
         self.label_2.pack()
         self.entry_2 = Entry(self.main_window, width = 45)
         self.entry_2.pack()
-        self.but_4 = Button(self.main_window, text = 'Clean Source', width=38)
+        self.but_4 = Button(self.main_window, text = 'Clean Source', width=38, command = self.clean_source)
         self.but_4.pack()
         self.counter = 2
 
@@ -38,8 +38,8 @@ class MyGUI:
     def get_from_base():
         pass
 
-    def open_url(url):
-        pass
+    def clean_source(self):
+        self.entry_2.delete(0, END)
 
     def set_text(self, text):
         self.entry_1.delete(0,END)
