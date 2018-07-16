@@ -28,7 +28,7 @@ def add_to_base(input_string, text, source):
             result.group(2)
 
             sql = sql + """INSERT INTO Equivalence (statement, name, equivalent) VALUES ('""" + statement_date + """', '""" + result.group(1) + """', '""" + result.group(2) + """');"""
-            if text != '':
+            if text != '\n':
                 sql = sql + """INSERT INTO Text (statement, name) VALUES ('""" + statement_date + """', '""" + text + """');"""
             if source != '':
                 sql = sql + """INSERT INTO Source (statement, name) VALUES ('""" + statement_date + """', '""" + source + """');"""
@@ -55,7 +55,7 @@ def add_to_base(input_string, text, source):
                     concepts.append(i.strip())
 
             sql = sql + """INSERT INTO Context (statement, name, concept) VALUES ('""" + statement_date + """', '""" + result.group(1) + """', '""" + result.group(2) + """');"""
-            if text != '':
+            if text != '\n':
                 sql = sql + """INSERT INTO Text (statement, name) VALUES ('""" + statement_date + """', '""" + text + """');"""
             if source != '':
                 sql = sql + """INSERT INTO Source (statement, name) VALUES ('""" + statement_date + """', '""" + source + """');"""
@@ -81,7 +81,7 @@ def add_to_base(input_string, text, source):
                 for i in concepts:
                     sql = sql + """INSERT INTO Concept (statement, name) VALUES ('""" + statement_date + """', '""" + i + """');"""
 
-            if text != '':
+            if text != '\n':
                 sql = sql + """INSERT INTO Text (statement, name) VALUES ('""" + statement_date + """', '""" + text + """');"""
             if source != '':
                 sql = sql + """INSERT INTO Source (statement, name) VALUES ('""" + statement_date + """', '""" + source + """');"""
