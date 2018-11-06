@@ -3,8 +3,8 @@ Project on the knowledge network constructing
 
 Suppose you want to read a text on a complex and incomprehensible topic (for example, string theory). Most likely, you will not understand anything. But why? Because there is no context. And what is the context? Looking for an answer to this question, I looked at several hundred books and articles in various disciplines. Not finding a specific answer, I came to my definition of context.
 
-# Misunderstanding is a lack of context.
-# Context is a collection of connections between concepts.
+Misunderstanding is a lack of context.
+Context is a collection of connections between concepts.
 
 If the set of connections between concepts is clear, then it can be argued that the context is clear and the text is clear.
 
