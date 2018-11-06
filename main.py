@@ -5,11 +5,7 @@ class MyGUI:
 
     def __init__(self, main_window):
         self.main_window = main_window
-<<<<<<< HEAD
         self.main_window.title("Context")
-=======
-        self.main_window.title("Knowledge Constructor")
->>>>>>> 82621972fa04c6511a74e42b5d1c62cace449b1d
         self.label_1 = Label(self.main_window, text = 'Link', width=45)
         self.label_1.pack()
         self.entry_1 = Entry(self.main_window, width = 45)
@@ -26,11 +22,7 @@ class MyGUI:
         self.label_2.pack()
         self.entry_2 = Entry(self.main_window, width = 45)
         self.entry_2.pack()
-<<<<<<< HEAD
         self.but_4 = Button(self.main_window, text = 'Clean source', width=38, command = self.clean_source)
-=======
-        self.but_4 = Button(self.main_window, text = 'Clean Source', width=38, command = self.clean_source)
->>>>>>> 82621972fa04c6511a74e42b5d1c62cace449b1d
         self.but_4.pack()
         self.counter = 2
 
