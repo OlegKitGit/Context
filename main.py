@@ -1,5 +1,7 @@
 from tkinter import *
 from add_to_base import add_to_base
+from get_from_base import get_from_base
+from edit_link import edit_link
 
 class MyGUI:
 
@@ -35,7 +37,13 @@ class MyGUI:
         self.entry_1.delete(0, END)
         self.txt_1.delete('1.0', END)
 
-    def get_from_base():
+    def get_from_base(self):
+        list_of_links = get_from_base(self.entry_1.get())
+        list_of_links.sort()
+        for name in list_of_links:
+            self.txt_1.insert(END, name + "\n")
+
+    def edit_link():
         pass
 
     def clean_source(self):
