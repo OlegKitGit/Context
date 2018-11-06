@@ -22,23 +22,29 @@ class MyGUI:
         self.label_2.pack()
         self.entry_2 = Entry(self.main_window, width = 45)
         self.entry_2.pack()
-        self.but_4 = Button(self.main_window, text = 'Clean Source', width=38)
+        self.but_4 = Button(self.main_window, text = 'Clean Source', width=38, command = self.clean_source)
         self.but_4.pack()
         self.counter = 2
 
     def add_to_base(self):
-        add_to_base(self.entry_1.get(), self.txt_1.get(), self.entry_2.get())
+        add_to_base(self.entry_1.get(), self.txt_1.get("1.0",END), self.entry_2.get())
         self.counter += 1
-        exec("self.label_" + str(self.counter) + " = Label(self.main_window, text = '" + self.entry_1.get() + "', width=45)")
+        exec("self.label_" + str(self.counter) + " = Label(self.main_window, text = '" + self.entry_1.get() + "', anchor=W, width=40)")
         exec("self.label_" + str(self.counter) + ".pack()")
-        exec("self.label_" + str(self.counter) + ".bind('<Button-1>',self.open_url)")
+        exec("self.label_" + str(self.counter) + ".bind('<Button-1>', lambda x, self = self: self.set_text(self.label_" + str(self.counter) +  ".cget('text')))")
         self.entry_1.delete(0, END)
+        self.txt_1.delete('1.0', END)
 
     def get_from_base():
         pass
 
-    def open_url(url):
-        pass
+    def clean_source(self):
+        self.entry_2.delete(0, END)
+
+    def set_text(self, text):
+        self.entry_1.delete(0,END)
+        self.entry_1.insert(0,text)
+        return
 
 counter = 0
 main_window = Tk()
