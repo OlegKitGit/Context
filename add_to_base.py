@@ -52,7 +52,8 @@ def add_to_base(input_string, text, source):
                 if result.group(1) != i.strip() and '<' + result.group(2) != i.strip():
                     concepts.append(i.strip())
 
-            sql = sql + """INSERT INTO Context (statement, name, concept) VALUES ('""" + statement_date + """', '""" + result.group(1) + """', '""" + result.group(2) + """');"""
+            sql = sql + """INSERT INTO Context (statement, name, concept) VALUES ('""" + statement_date + """', '""" + result.group(2) + """', '""" + result.group(1) + """');"""
+            sql = sql + """INSERT INTO Concept (statement, name) VALUES ('""" + statement_date + """', '""" + result.group(1) + """');"""
             if text != '\n':
                 sql = sql + """INSERT INTO Text (statement, name) VALUES ('""" + statement_date + """', '""" + text + """');"""
             if source != '':

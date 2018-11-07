@@ -38,8 +38,8 @@ class MyGUI:
         self.txt_1.delete('1.0', END)
 
     def get_from_base(self):
+        self.txt_1.delete('1.0', END)
         list_of_links = get_from_base(self.entry_1.get())
-        list_of_links.sort()
         for name in list_of_links:
             self.txt_1.insert(END, name + "\n")
 
