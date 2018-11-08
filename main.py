@@ -29,7 +29,7 @@ class MyGUI:
         self.counter = 2
 
     def add_to_base(self):
-        add_to_base(self.entry_1.get(), self.txt_1.get("1.0",END), self.entry_2.get())
+        add_to_base(self.entry_1.get().lower(), self.txt_1.get("1.0",END), self.entry_2.get())
         self.counter += 1
         exec("self.label_" + str(self.counter) + " = Label(self.main_window, text = '" + self.entry_1.get() + "', anchor=W, width=40)")
         exec("self.label_" + str(self.counter) + ".pack()")
@@ -39,7 +39,7 @@ class MyGUI:
 
     def get_from_base(self):
         self.txt_1.delete('1.0', END)
-        list_of_links = get_from_base(self.entry_1.get())
+        list_of_links = get_from_base(self.entry_1.get().lower())
         for name in list_of_links:
             self.txt_1.insert(END, name + "\n")
 
