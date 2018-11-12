@@ -54,7 +54,7 @@ def add_to_base(input_string, text, source):
 
             sql = sql + """INSERT INTO Context (statement, name, concept) VALUES ('""" + statement_date + """', '""" + result.group(2) + """', '""" + result.group(1) + """');"""
             sql = sql + """INSERT INTO Concept (statement, name) VALUES ('""" + statement_date + """', '""" + result.group(1) + """');"""
-            if text != '\n':
+            if text != '\n' and '\n\n' and '\n\n\n':
                 sql = sql + """INSERT INTO Text (statement, name) VALUES ('""" + statement_date + """', '""" + text + """');"""
             if source != '':
                 sql = sql + """INSERT INTO Source (statement, name) VALUES ('""" + statement_date + """', '""" + source + """');"""

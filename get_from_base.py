@@ -20,32 +20,40 @@ def get_from_base(input_string):
         result = re.match(p, input_string)
 
         if result:
-            sql = """SELECT name FROM Context WHERE statement IN (SELECT statement FROM Context WHERE concept = '""" + result.group(1) + """')"""
+            sql = """SELECT statement, name FROM Concept WHERE statement IN (SELECT statement FROM Concept WHERE name = '""" + result.group(1) + """')"""
             cur.execute(sql)
             list_of_names = cur.fetchall()
-            list_of_original_names.append('Context:')
-            for name in list_of_names:
-                list_of_original_names_sort.append(name[0])
-            list_of_original_names_sort.sort()
-            list_of_original_names = list_of_original_names + list_of_original_names_sort
-            list_of_original_names_sort = []
-            list_of_original_names.append(' ')
-            list_of_original_names.append('Concept:')
-            sql = """SELECT name FROM Concept WHERE statement IN (SELECT statement FROM Concept WHERE name = '""" + result.group(1) + """')"""
-            cur.execute(sql)
-            list_of_names = cur.fetchall()
-            for name in list_of_names:
-                if name[0] != result.group(1):
-                    list_of_original_names_sort.append(name[0])
-            sql = """SELECT name FROM Concept WHERE statement IN (SELECT statement FROM Context WHERE concept = '""" + result.group(1) + """')"""
+            link_name = []
+            links = []
+            for i in list_of_names:
+                    link_name.append(i[1])
+                    for j in list_of_names[:]:
+                            if i != j:
+                                    if i[0] == j[0]:
+                                            link_name[list_of_names.index(i)] = link_name[list_of_names.index(i)] + ", " + j[1]
+                                            list_of_names.remove(j)
+                    links.append((i[0], link_name[list_of_names.index(i)]))
+            sql = """SELECT statement, name FROM Text WHERE statement IN (SELECT statement FROM Concept WHERE name = '""" + result.group(1) + """')"""
             cur.execute(sql)
             list_of_names = cur.fetchall()
             for name in list_of_names:
-                if name[0] != result.group(1):
-                    list_of_original_names_sort.append(name[0])
-            list_of_original_names_sort.sort()
-            list_of_original_names = list_of_original_names + [el for el, _ in groupby(list_of_original_names_sort)]
-            list_of_original_names_sort = []
+                list_of_names[list_of_names.index(name)] = (name[0], '\n' + name[1][:-1])  #----------------------------------------
+            links = links + list_of_names
+            #k = 0
+            list_of_links = []
+            for i in links:
+                list_of_links.append('----------------------------------------')
+                list_of_links.append(i[1])
+                for j in links[:]:
+                    if i != j:
+                        if i[0] == j[0]:
+                           list_of_links.append(j[1])
+                           #k += 1
+                           links.remove(j)
+                           #if k > 0:
+                           #    list_of_links.remove(i[1])
+                           #    k = 0
+            list_of_original_names = list_of_links
             cur.close()
             con.commit()
             con.close()
@@ -107,6 +115,7 @@ def get_from_base(input_string):
                 links = links + list_of_texts + list_of_sources
                 list_of_links = []
                 for i in links:
+                    list_of_links.append(str(i[0]))
                     list_of_links.append('----------------------------------')
                     list_of_links.append(i[1])
                     list_of_links.append('----------------------------------')
