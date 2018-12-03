@@ -37,7 +37,7 @@ class MyGUI:
     def add_to_base(self):
         add_to_base(self.entry_1.get().lower(), self.txt_1.get("1.0",END), self.entry_2.get())
         self.counter += 1
-        exec("self.label_" + str(self.counter) + " = Label(self.main_window, text = '" + self.entry_1.get() + "', anchor=W, width=40)")
+        exec("self.label_" + str(self.counter) + " = Label(self.main_window, text = '" + self.entry_1.get() + "', anchor=W, width=40, bg='green')")
         exec("self.label_" + str(self.counter) + ".pack()")
         exec("self.label_" + str(self.counter) + ".bind('<Button-1>', lambda x, self = self: self.set_text(self.label_" + str(self.counter) +  ".cget('text')))")
         self.entry_1.delete(0, END)

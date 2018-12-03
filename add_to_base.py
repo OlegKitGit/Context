@@ -37,23 +37,20 @@ def add_to_base(input_string, text, source):
             con.close()
             return 'Ok'
             
-        pattern = r'([-+0-9a-zа-я][-+0-9a-zа-я\s]+)\,\s\<([-+0-9a-zа-я\s]+)'
+        pattern = r'\<([-+0-9a-zа-я\s]+)'
         p = re.compile(pattern)
 
-        result = re.match(p, input_string)
+        result = re.findall(p, input_string)
 
         if result:
-            result.group(1) 
-            result.group(2)
 
             input_string = input_string.split(',')
             concepts = []
             for i in input_string:
-                if result.group(1) != i.strip() and '<' + result.group(2) != i.strip():
+                if '<' + result[0] != i.strip():
                     concepts.append(i.strip())
 
-            sql = sql + """INSERT INTO Context (statement, name, concept) VALUES ('""" + statement_date + """', '""" + result.group(2) + """', '""" + result.group(1) + """');"""
-            sql = sql + """INSERT INTO Concept (statement, name) VALUES ('""" + statement_date + """', '""" + result.group(1) + """');"""
+            sql = sql + """INSERT INTO Context (statement, name) VALUES ('""" + statement_date + """', '""" + result[0] + """');"""
             if text != '\n' and '\n\n' and '\n\n\n':
                 sql = sql + """INSERT INTO Text (statement, name) VALUES ('""" + statement_date + """', '""" + text + """');"""
             if source != '':

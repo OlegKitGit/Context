@@ -14,8 +14,7 @@ CREATE TABLE Concept (
 CREATE TABLE Context (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     statement INTEGER,
-    name TEXT,
-    concept TEXT
+    name TEXT
 );
 
 CREATE TABLE Text (
