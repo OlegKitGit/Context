@@ -1,3 +1,5 @@
+﻿#Complex Network Geometry and Frustrated Synchronization
+
 dynamics, network of neuronal culture, network geometry, dimension, <network neuroscience
 
 The dynamics of networks of neuronal cultures has been recently shown to be strongly dependent on the network geometry and in particular on their dimensionality. However, this phenomenon has been so far mostly unexplored from the theoretical point of view

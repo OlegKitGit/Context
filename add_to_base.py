@@ -44,6 +44,8 @@ def add_to_base(input_string, text, source):
 
         if result:
 
+            result[0] = result[0].strip()
+
             input_string = input_string.split(',')
             concepts = []
             for i in input_string:
