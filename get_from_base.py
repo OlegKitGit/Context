@@ -111,19 +111,19 @@ def get_from_base(input_string):
                             if i[0] == j[0]:
                                 link_name[list_of_names.index(i)] = link_name[list_of_names.index(i)] + ", " + j[1]
                                 list_of_names.remove(j)
-                    links.append((i[0], link_name[0] + ", " + context))
+                    links.append((i[0], link_name[list_of_names.index(i)] + ", " + context))
                 links = links + list_of_texts + list_of_sources
                 list_of_links = []
                 for i in links:
                     list_of_links.append(str(i[0]))
-                    list_of_links.append('----------------------------------')
+                    list_of_links.append('----------------------------------------')
                     list_of_links.append(i[1])
-                    list_of_links.append('----------------------------------')
+                    list_of_links.append('----------------------------------------')
                     for j in links[:]:
                         if i != j:
                             if i[0] == j[0]:
                                list_of_links.append(j[1])
-                               list_of_links.append('----------------------------------')
+                               list_of_links.append('----------------------------------------')
                                links.remove(j)                     
                 cur.close()
                 con.commit()
@@ -173,19 +173,19 @@ def get_from_base(input_string):
                             if i[0] == j[0]:
                                 link_name[list_of_names.index(i)] = link_name[list_of_names.index(i)] + ", " + j[1]
                                 list_of_names.remove(j)
-                    links.append((i[0], link_name[0]))
+                    links.append((i[0], link_name[list_of_names.index(i)]))
                 links = links + list_of_texts + list_of_sources
                 list_of_links = []
                 for i in links:
                     list_of_links.append(str(i[0]))
-                    list_of_links.append('----------------------------------')
+                    list_of_links.append('----------------------------------------')
                     list_of_links.append(i[1])
-                    list_of_links.append('----------------------------------')
+                    list_of_links.append('----------------------------------------')
                     for j in links[:]:
                         if i != j:
                             if i[0] == j[0]:
                                list_of_links.append(j[1])
-                               list_of_links.append('----------------------------------')
+                               list_of_links.append('----------------------------------------')
                                links.remove(j)                     
                 cur.close()
                 con.commit()

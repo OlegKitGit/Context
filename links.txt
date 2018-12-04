@@ -1,0 +1,205 @@
+#Python 3 object-oriented programming
+
+software development, design, programming, <OOP
+
+In software development, design is often considered as the step done before 
+programming.
+
+analysis, programming, design, <OOP
+
+This isnt true; in reality, analysis, programming, and design tend to 
+overlap, combine, and interweave
+
+object, <OOP
+
+Everyone knows what an object is—a tangible thing that we can sense, feel,  
+and manipulate.
+
+object, <OOP
+
+The earliest objects we interact with are typically baby toys.
+Wooden blocks, plastic shapes, and over-sized puzzle pieces are common first 
+objects.Babies learn quickly that certain objects do certain things: bells ring,  
+buttons press, and levers pull.
+
+object, model, doing, <OOP
+
+Software objects are not typically tangible things that you can pick up, sense, or feel, but they are models of something that can do certain things and have certain things done to them.
+
+object, data, behavior, <OOP
+
+Formally, an object is a collection of data and associated behaviors.
+
+object-oriented, modeling, object, <OOP
+
+So object-oriented means functionally directed towards modeling objects.
+
+object-oriented, modeling, system, object, data, behavior, <OOP  
+
+This is one of the many techniques used for modeling complex systems by describing a collection of interacting objects via their data and behavior.
+
+object-oriented, OOA, OOD, OOP, <OOP
+
+Object-oriented
+    Object-oriented analysis (OOA)
+    Object-oriented design (OOD) 
+    Object-oriented programming (OOP)
+
+software development, analysis, design, programming, <OOP
+
+Stages of software development
+    Analysis
+    Design
+    Programming
+
+OOA, problem, system, task, application, object, interaction, <OOP 
+
+Object-oriented analysis (OOA) is the process of looking at a problem, system, or task (that somebody wants to turn into an application) and identifying the objects and interactions between those objects. 
+
+OOA, <OOP
+
+The analysis stage is all about what needs to be done.
+
+OOA, requirement, <OOP
+
+The output of the analysis stage is a set of requirements.
+    
+OOA, interview, customer, process, <OOP 
+
+The initial stages of analysis include interviewing customers, studying their processes, and  eliminating possibilities.
+
+OOD, requirement, specification, implementation, object, behavior
+
+Object-oriented design (OOD) is the process of converting such requirements into an implementation specification. The designer must name the objects, define the behaviors, and formally specify which objects can activate specific behaviors on other objects.
+
+OOD, <OOP
+
+The design stage is all about how things should be done.
+
+OOD, implementation, specification, <OOP
+
+The output of the design stage is an implementation specification.
+
+OOD, requirement, OOA, class, interface, OOPL, <OOP   
+
+If we were to complete the design stage in a single step, we would have turned the requirements defined during object-oriented analysis into a set of classes and interfaces that could be implemented in (ideally) any object-oriented programming language.
+
+OOP, design, program, <OOP
+    
+Object-oriented programming (OOP) is the process of       converting this perfectly defined design into a working program that does exactly what the CEO originally requested.
+
+analysis, design, programming, <OOP
+
+Yeah, right! It would be lovely if the world met this ideal and we could follow these stages one by one, in perfect order, like all the old textbooks told us to.
+
+analysis, design, programming, feature, <OOP
+
+We ll always find things that need further analysis while we are designing. When we are programming, we find features that need clarification in the design.
+
+software development, iterative development model, <OOP
+
+Most twenty-first century development happens in an iterative development model.
+
+iterative development, task, modeling, design, programming, review, expand, feature, development cycle, <OOP
+
+In iterative development, a small part of the task is modeled, designed, and programmed, then the program is reviewed and expanded to improve each feature and include new features in a series of short development cycles.
+
+class, OOM, object <OOP
+
+In object-oriented modeling, the term used for kind of object is class.
+
+class, object, <OOP
+
+Classes describe objects. They are like blueprints for creating an object.
+
+class, attribut, behavior, <OOP
+
+Each orange is a distinct object, but all three have the attributes and behaviors associated with one class: the general class of oranges
+
+class, class relationship, UML, class diagram, <OOP
+
+The relationship between the four classes of objects in our inventory system can be described using a Unified Modeling Language  (invariably referred to as UML, because three letter acronyms never go out of style) class diagram. 
+
+association, class, <OOP
+
+Association is the most basic way for two classes to be related.
+
+iterative development, UML diagram, <OOP   
+
+Citing iterative development, they will argue that formal specifications done up in fancy UML diagrams are going to be redundant before they re implemented, and that maintaining these formal diagrams will only waste time and not benefit anyone.
+
+UML, communication, <OOP
+
+UML is extremely useful in these brainstorming sessions for quick and easy communication.
+
+UML diagramm, <OOP
+
+Initial diagramming on when we started a design,  we will eventually find them a useful reference. 
+
+UML diagramm, class, object, deployment, state, activity, <OOP
+
+UML covers far more than class and object diagrams; it also has a syntax for use cases, deployment, state changes, and activities.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -20,7 +20,8 @@ def keywords_extraction(text):
                 link = term.normalized
     elif lang == 'en':
         blob = TextBlob(text)
-        for term in [stem(n) for n,t in blob.tags if t == 'NN' or t == 'NNS']:
+        #for term in [stem(n) for n,t in blob.tags if t == 'NN' or t == 'NNS']:
+        for term in [n for n,t in blob.tags if t == 'NN' or t == 'NNS']:
             if link: 
                 link = link + ', '+ term
             else:
