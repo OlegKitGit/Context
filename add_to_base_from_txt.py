@@ -2,6 +2,7 @@ import string
 import re
 import sqlite3
 from datetime import datetime, date, time
+import time
 
 
 def add_to_base_from_txt(input_string, text, source):
@@ -104,10 +105,12 @@ for file_string in file_strings.finditer(content):
         source = line[1:].strip()  
     if ', <' in line:
         if input_string != '':
-           add_to_base_from_txt(input_string.lower().strip(), text.strip(), source) 
+            time.sleep(1)
+            add_to_base_from_txt(input_string.lower().strip(), text.strip(), source) 
         text = ''
         input_string = line
     else:
         text = text + line
     k += 1
-
+time.sleep(1)
+add_to_base_from_txt(input_string.lower().strip(), text.strip(), source)
