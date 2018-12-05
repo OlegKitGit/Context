@@ -11,23 +11,18 @@ def edit_link(statement):
         concepts = [x[0] for x in concepts]
         sql_delete = """DELETE FROM Concept WHERE statement = """ + statement + """"""
         cur.execute(sql_delete)
-        sql_context = """SELECT concept, name FROM Context WHERE statement = """ + statement + """"""
+        sql_context = """SELECT name FROM Context WHERE statement = """ + statement + """"""
         cur.execute(sql_context)
         context = cur.fetchall()
         sql_delete = """DELETE FROM Context WHERE statement = """ + statement + """"""
         cur.execute(sql_delete)
-        if context:
-            links = context[0][0] + ', <' + context[0][1]
-            for concept in concepts:
-                if concept != context[0][0]:
-                    links = links + ', ' + concept
-        else:
-            links = ''
-            for concept in concepts:
-                if links != '':
-                    links = links + ', ' + concept
-                else:
-                    links = concept
+        links = ''
+        for concept in concepts:
+            if links != '':
+                links = links + ', ' + concept
+            else:
+                links = links + concept
+        links = links + ', <' + context[0][0] 
         sql_text = """SELECT name FROM Text WHERE statement = """ + statement + """"""
         cur.execute(sql_text)
         text = cur.fetchall()
