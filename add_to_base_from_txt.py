@@ -102,6 +102,7 @@ pattern = '([^\n]*\n+)'
 k = 0
 input_string = ''
 text = ''
+source = ''
 file_strings = re.compile(pattern)
 for file_string in file_strings.finditer(content):
     line  = file_string.group()
