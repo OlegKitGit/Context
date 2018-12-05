@@ -3,6 +3,7 @@ import re
 import sqlite3
 from datetime import datetime, date, time
 import time
+import codecs
 
 
 def add_to_base_from_txt(input_string, text, source):
@@ -46,6 +47,7 @@ def add_to_base_from_txt(input_string, text, source):
         if result:
 
             result[0] = result[0].strip()
+            text = text.replace("'", '')
 
             input_string = input_string.split(',')
             concepts = []
@@ -72,6 +74,7 @@ def add_to_base_from_txt(input_string, text, source):
 
         else:
             input_string = input_string.split(',')
+            text = text.replace("'", '')
             concepts = []
             for i in input_string:
                 concepts.append(i.strip())
@@ -92,8 +95,9 @@ def add_to_base_from_txt(input_string, text, source):
             con.close()
             return 'Ok'
 
-file = open("links.txt")
-content = file.read().encode("cp1251").decode("utf8")
+file = open("links.txt", "r", encoding='utf-8')
+#content = file.read().encode("cp1251").decode("utf8")
+content = file.read()
 pattern = '([^\n]*\n+)'
 k = 0
 input_string = ''

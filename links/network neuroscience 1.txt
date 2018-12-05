@@ -1,4 +1,4 @@
-﻿#Complex Network Geometry and Frustrated Synchronization
+#Complex Network Geometry and Frustrated Synchronization
 
 dynamics, network of neuronal culture, network geometry, dimension, <network neuroscience
 

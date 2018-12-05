@@ -1,0 +1,26 @@
+#Complex Network Geometry and Frustrated Synchronization
+
+Blue Brain, pair of neurons, neuron, correlation, dynamics, higher dimensional simplicies, <network neuroscience
+
+This result can be compared with results obtained in the framework of the Blue Brain project where is has been observed that pairs of neurons have a more signiﬁcant correlations in their dynamics if they belong to higher dimensional simplicies.
+
+network topology, network geometry, network dynamics, <network neuroscience
+
+These results reveal that not only network topology but also network geometry plays a crucial role in determining the dynamical properties of a network
+
+network geometry, network dynamics, theoretical framework, simplicial complexes, synchronization, dynamics, <network neuroscience 
+
+However, the connection between network geometry and dynamics has been so far mostly unexplored. Here, we provide a theoretical framework based on simplicial complexes to investigate the effect of network geometry on synchronization dynamics
+
+ﬁnite spectral dimension, geometrical network, complex modular network structure, network structure, frustrated synchronization, spatio-temporal ﬂuctuation, order parameter, synchronization dynamics, <network neuroscience
+
+Our study reveals that a ﬁnite spectral dimension of geometrical networks can be combined with a complex modular network structure to give rise to frustrated synchronization and spatio-temporal ﬂuctuations of the order parameter of the synchronization dynamics.
+
+network geometry, dynamics of complex networks, <network neuroscience
+
+In this way, we provide a clear evidence of the important effect that network geometry has on the dynamics of complex networks.
+
+synchronization, physical system, biological system, chemical system, social system, <network neuroscience
+
+Synchronization phenomena are the subject of extensive research in physical, biological, chemical and social systems
+

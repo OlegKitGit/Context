@@ -45,6 +45,7 @@ def add_to_base(input_string, text, source):
         if result:
 
             result[0] = result[0].strip()
+            text = text.replace("'", '')
 
             input_string = input_string.split(',')
             concepts = []
@@ -71,6 +72,7 @@ def add_to_base(input_string, text, source):
 
         else:
             input_string = input_string.split(',')
+            text = text.replace("'", '')
             concepts = []
             for i in input_string:
                 concepts.append(i.strip())

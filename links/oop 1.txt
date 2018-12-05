@@ -1,4 +1,4 @@
-﻿#Python 3 object-oriented programming
+#Python 3 object-oriented programming
 
 software development, design, programming, <OOP
 
@@ -139,67 +139,3 @@ Initial diagramming on when we started a design,  we will eventually find them a
 UML diagram, class, object, deployment, state, activity, <OOP
 
 UML covers far more than class and object diagrams; it also has a syntax for use cases, deployment, state changes, and activities.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
